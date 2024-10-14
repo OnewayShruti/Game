@@ -1,0 +1,15 @@
+Tests
+Waiting:1. You should have a function called getComputerChoice
+Waiting:2. Your getComputerChoice function should return "rock", "paper", or "scissors" at random.
+Waiting:3. You should have a function called getHumanChoice
+Waiting:4. You should have two variables named humanScore and computerScore in the global scope.
+Waiting:5. You should have a function called playRound
+Waiting:6. Your playRound function should take the human and computer player choices as arguments with the parameters humanChoice and computerChoice.
+Waiting:7. Your playRound function should be case-insensitive so that players can input "rock", "ROCK", "RocK", or other variations.
+Waiting:8. Your playRound function should return the string "It's a tie!" if the human and computer choices are the same.
+Waiting:9. Your playRound function should return the string "You win! [player choice] beats [computer choice]" if the player wins.
+Waiting:10. Your playRound function should return the string "You lose! [computer choice] beats [player choice]" if the computer wins.
+Waiting:11. Your playRound function should increment the humanScore or computerScore variable based on the round winner.
+Waiting:12. You should have a function called playGame.
+Waiting:13. You should use a loop to play 3 rounds.
+Waiting:14. You should return the winner of the game based on who won the most rounds.
