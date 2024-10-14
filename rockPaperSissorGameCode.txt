@@ -1,0 +1,61 @@
+const hand = ['rock', 'paper', 'scissors'];
+let humanScore = 0;
+let computerScore = 0;
+
+
+
+function getComputerChoice(){
+  let index = Math.floor(Math.random() * 3);
+  return hand[index];
+}
+
+function getHumanChoice(){
+  let userInput = prompt("rock | paper | scissors");
+  return userInput;
+}
+
+function playRound(humanChoice,computerChoice){
+  let human = humanChoice.toLowerCase();
+  let computer = computerChoice.toLowerCase();
+
+  if(human == 'rock' && computer == 'paper'){
+    computerScore++;
+    return "You lose! [computer choice] beats [player choice]";
+  }
+  else if(human == 'rock' && computer == 'scissors'){
+    humanScore++;
+     return "You win! [player choice] beats [computer choice]";
+  }
+  else if(human == 'paper' && computer == 'rock'){
+    humanScore++;
+    return "You win! [player choice] beats [computer choice]";
+  }
+  else if(human == 'paper' && computer == 'scissors'){
+    computerScore++;
+    return "You lose! [computer choice] beats [player choice]";
+  }
+  else if(human == 'scissors' && computer == 'rock'){
+    computerScore++;
+    return "You lose! [computer choice] beats [player choice]";
+  }
+  else if(human == 'scissors' && computer == 'paper'){
+    humanScore++;
+    return "You win! [player choice] beats [computer choice]";
+  }
+  else{
+    return "It's a tie!";
+  }
+
+}
+
+function playGame(){
+  for(let iter=0;iter<3;iter++){
+    console.log(playRound(getHumanChoice(),getComputerChoice()));
+  }
+  if(computerScore>humanScore){
+    return "You lose the game!";
+  }
+  else{
+    return "You win the game!";
+  }
+}
